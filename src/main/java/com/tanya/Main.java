@@ -7,6 +7,7 @@ public class Main {
         checkSumSign();
         printColor();
         compareNumbers();
+        System.out.println(checkSumInRange(5, 10));
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -42,6 +43,15 @@ public class Main {
             System.out.println("a >= b");
         } else {
             System.out.println("a < b");
+        }
+    }
+    public static boolean checkSumInRange(int a, int b) {
+        int sum = a + b;
+
+        if (sum >= 10 && sum <= 20) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
