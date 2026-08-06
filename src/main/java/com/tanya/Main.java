@@ -8,6 +8,7 @@ public class Main {
         printColor();
         compareNumbers();
         System.out.println(checkSumInRange(5, 10));
+        checkNumber(-10);
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -53,6 +54,15 @@ public class Main {
         } else {
             return false;
         }
+    }
+    public static void checkNumber(int number) {
+
+        if (number >= 0) {
+            System.out.println("Положительное число");
+        } else {
+            System.out.println("Отрицательное число");
+        }
+
     }
 }
 
