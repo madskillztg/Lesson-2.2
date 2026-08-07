@@ -12,6 +12,7 @@ public class Main {
         System.out.println(isNegative(-10));
         printString("Hello", 5);
         System.out.println(isLeapYear(2024));
+        invertArray();
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -94,7 +95,22 @@ public class Main {
             return false;
         }
     }
-}
+        public static void invertArray() {
+            int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == 0) {
+                    array[i] = 1;
+                } else {
+                    array[i] = 0;
+                }
+            }
+
+            for (int i = 0; i < array.length; i++) {
+                System.out.print(array[i] + " ");
+            }
+        }
+    }
 
 
 
