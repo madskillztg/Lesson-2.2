@@ -10,6 +10,7 @@ public class Main {
         System.out.println(checkSumInRange(5, 10));
         checkNumber(-10);
         System.out.println(isNegative(-10));
+        printString("Hello", 5);
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -74,7 +75,15 @@ public class Main {
             }
 
         }
+    public static void printString(String text, int count) {
+
+        for (int i = 0; i < count; i++) {
+            System.out.println(text);
+        }
+
     }
+}
+
 
 
 
