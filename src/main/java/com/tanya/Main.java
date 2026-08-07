@@ -16,6 +16,12 @@ public class Main {
         fillArray();
         changeArray();
         fillDiagonal();
+        int[] result = createArray(10, 5);
+
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
+        System.out.println();
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -153,6 +159,15 @@ public static void fillDiagonal() {
         System.out.println();
     }
 }
-}
 
+public static int[] createArray(int len, int initialValue) {
+    int[] array = new int[len];
+
+    for (int i = 0; i < array.length; i++) {
+        array[i] = initialValue;
+    }
+
+    return array;
+}
+}
 
