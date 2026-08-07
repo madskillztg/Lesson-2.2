@@ -13,6 +13,7 @@ public class Main {
         printString("Hello", 5);
         System.out.println(isLeapYear(2024));
         invertArray();
+        fillArray();
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -105,12 +106,23 @@ public class Main {
                     array[i] = 0;
                 }
             }
-
             for (int i = 0; i < array.length; i++) {
                 System.out.print(array[i] + " ");
             }
+
+            System.out.println();}
+    public static void fillArray() {
+        int[] array = new int[100];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
         }
-    }
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+}
+}
 
 
 
