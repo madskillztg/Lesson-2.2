@@ -11,6 +11,7 @@ public class Main {
         checkNumber(-10);
         System.out.println(isNegative(-10));
         printString("Hello", 5);
+        System.out.println(isLeapYear(2024));
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -80,7 +81,18 @@ public class Main {
         for (int i = 0; i < count; i++) {
             System.out.println(text);
         }
+    }
+    public static boolean isLeapYear(int year) {
 
+        if (year % 400 == 0) {
+            return true;
+        } else if (year % 100 == 0) {
+            return false;
+        } else if (year % 4 == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
