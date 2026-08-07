@@ -9,6 +9,7 @@ public class Main {
         compareNumbers();
         System.out.println(checkSumInRange(5, 10));
         checkNumber(-10);
+        System.out.println(isNegative(-10));
     }
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -64,5 +65,16 @@ public class Main {
         }
 
     }
-}
+    public static boolean isNegative(int number) {
+
+        if (number < 0) {
+            return true;
+        } else {
+            return false;
+            }
+
+        }
+    }
+
+
 
