@@ -1,17 +1,59 @@
 package com.tanya;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Set<Student> students = new HashSet<>();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        students.add(new Student(
+                "Анна",
+                "Группа 1",
+                2,
+                Arrays.asList(5, 4, 5)
+        ));
+
+        students.add(new Student(
+                "Иван",
+                "Группа 1",
+                2,
+                Arrays.asList(2, 3, 2)
+        ));
+
+        students.add(new Student(
+                "Олег",
+                "Группа 2",
+                3,
+                Arrays.asList(4, 4, 3)
+        ));
+
+        StudentService studentService = new StudentService();
+
+        System.out.println("Студенты до удаления:");
+        studentService.printStudents(students, 2);
+
+        studentService.removeStudentsWithLowAverage(students);
+
+        System.out.println("Студенты после удаления:");
+        studentService.printStudents(students, 2);
+
+        studentService.promoteStudents(students);
+
+        System.out.println("Студенты после перевода на следующий курс:");
+        studentService.printStudents(students, 3);
+
+        PhoneBook phoneBook = new PhoneBook();
+
+        phoneBook.add("Иванов", "89991112233");
+        phoneBook.add("Иванов", "89994445566");
+        phoneBook.add("Петров", "89997778899");
+
+        System.out.println("Телефоны Иванова:");
+        System.out.println(phoneBook.get("Иванов"));
+
+        System.out.println("Телефоны Петрова:");
+        System.out.println(phoneBook.get("Петров"));
     }
 }
