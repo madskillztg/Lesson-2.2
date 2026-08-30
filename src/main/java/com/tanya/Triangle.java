@@ -10,3 +10,4 @@ public class Triangle {
         System.out.println(area(5, 4));
     }
 }
+
