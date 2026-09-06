@@ -38,6 +38,7 @@ class MtsPaymentTest {
                 actualTitle
         );
     }
+
     @Test
     void shouldShowCommunicationServiceFieldPlaceholders() {
         Assertions.assertAll(
@@ -109,6 +110,7 @@ class MtsPaymentTest {
                 )
         );
     }
+
     @Test
     void shouldOpenPaymentWindowForCommunicationService() {
         paymentPage.fillCommunicationServiceData("297777777", "10")
@@ -137,10 +139,10 @@ class MtsPaymentTest {
                 )
         );
 
-    Assertions.assertEquals(
-            "Оплатить 10.00 BYN",
-            paymentPage.getPaymentButtonText()
-            );
+        Assertions.assertEquals(
+                "Оплатить 10.00 BYN",
+                paymentPage.getPaymentButtonText()
+        );
 
         Assertions.assertEquals(
                 "10.00 BYN",

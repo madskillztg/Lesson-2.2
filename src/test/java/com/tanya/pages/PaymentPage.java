@@ -119,11 +119,12 @@ public class PaymentPage {
                 ExpectedConditions.presenceOfElementLocated(By.id(fieldId))
         ).getAttribute("placeholder");
     }
-        public String getCardExpirationPlaceholder() {
-            return wait.until(
-                    ExpectedConditions.presenceOfElementLocated(CARD_EXPIRATION)
-            ).getAttribute("placeholder");
-        }
+
+    public String getCardExpirationPlaceholder() {
+        return wait.until(
+                ExpectedConditions.presenceOfElementLocated(CARD_EXPIRATION)
+        ).getAttribute("placeholder");
+    }
 
     public String getCardNumberLabel() {
         return wait.until(
@@ -148,6 +149,7 @@ public class PaymentPage {
                 )
         ).getText();
     }
+
     public String getPaymentButtonText() {
         return wait.until(
                         ExpectedConditions.visibilityOfElementLocated(PAYMENT_BUTTON)
@@ -163,11 +165,13 @@ public class PaymentPage {
                 .replaceAll("\\s+", " ")
                 .trim();
     }
+
     public String getPaymentAmount() {
         return wait.until(
                 ExpectedConditions.visibilityOfElementLocated(PAYMENT_AMOUNT)
         ).getText().trim();
     }
+
     public boolean arePaymentSystemIconsDisplayed() {
         List<WebElement> icons = wait.until(
                 ExpectedConditions.visibilityOfAllElementsLocatedBy(PAYMENT_SYSTEM_ICONS)
