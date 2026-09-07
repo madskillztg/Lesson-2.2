@@ -111,6 +111,15 @@ class MtsPaymentTest {
         phoneInput.clear();
         phoneInput.sendKeys("297777777");
 
+        WebElement amountInput = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.id("connection-sum")
+                )
+        );
+
+        amountInput.clear();
+        amountInput.sendKeys("10");
+
         WebElement continueButton = wait.until(
                 ExpectedConditions.elementToBeClickable(
                         By.xpath("//button[contains(., 'Продолжить')]")
@@ -125,8 +134,8 @@ class MtsPaymentTest {
         continueButton.click();
 
         Assertions.assertTrue(
-                continueButton.isDisplayed(),
-                "Кнопка «Продолжить» исчезла после нажатия"
+                driver.getPageSource().contains("Оплата"),
+                "После нажатия «Продолжить» информация об оплате не появилась"
         );
     }
 
@@ -140,3 +149,4 @@ class MtsPaymentTest {
         }
     }
 }
+
